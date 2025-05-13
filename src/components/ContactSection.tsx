@@ -1,7 +1,7 @@
 
 import { useEffect, useRef } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Phone, Mail, MapPin, Clock, Linkedin, Facebook, Instagram } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Instagram } from 'lucide-react';
 
 const ContactSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -30,25 +30,25 @@ const ContactSection = () => {
     {
       icon: <Phone className="h-5 w-5 text-primary" />,
       title: "Telefone",
-      details: "(11) 3456-7890",
-      link: "tel:+551134567890"
+      details: "(24) 99262-7116",
+      link: "tel:+5524992627116"
     },
     {
       icon: <Mail className="h-5 w-5 text-primary" />,
       title: "E-mail",
-      details: "contato@harmonicacontabil.com.br",
-      link: "mailto:contato@harmonicacontabil.com.br"
+      details: "ronaldo.rocha27@gmail.com",
+      link: "mailto:ronaldo.rocha27@gmail.com"
     },
     {
       icon: <MapPin className="h-5 w-5 text-primary" />,
       title: "Endereço",
-      details: "Av. Paulista, 1000, São Paulo - SP",
+      details: "Rua São João Batista, 17 - Areal, Angra dos Reis - RJ",
       link: "https://maps.google.com"
     },
     {
       icon: <Clock className="h-5 w-5 text-primary" />,
       title: "Horário",
-      details: "Segunda a Sexta, 9h às 18h",
+      details: "Segunda à Sexta: 08:00 - 18:00, Sábado: 08:00 - 12:00",
       link: null
     }
   ];
@@ -80,8 +80,8 @@ const ContactSection = () => {
                 <div>
                   <h3 className="text-2xl font-bold mb-6">Informações de Contato</h3>
                   <p className="text-muted-foreground mb-8">
-                    Para solicitar orçamentos, tirar dúvidas ou agendar uma consulta, 
-                    utilize um dos canais de atendimento abaixo. Respondemos com rapidez e eficiência.
+                    Para orçamentos, dúvidas ou informações sobre produtos,
+                    utilize um dos nossos canais de atendimento abaixo. Respondemos com rapidez e eficiência.
                   </p>
                   
                   <div className="space-y-6 mb-8">
@@ -97,11 +97,9 @@ const ContactSection = () => {
                   </div>
                   
                   <div>
-                    <h4 className="text-lg font-medium mb-4">Siga-nos</h4>
+                    <h4 className="text-lg font-medium mb-4">Redes Sociais</h4>
                     <div className="flex space-x-3">
-                      <SocialLink icon={<Facebook size={20} />} href="#" label="Facebook" />
-                      <SocialLink icon={<Instagram size={20} />} href="#" label="Instagram" />
-                      <SocialLink icon={<Linkedin size={20} />} href="#" label="LinkedIn" />
+                      <SocialLink icon={<Instagram size={20} />} href="https://www.instagram.com/Areal_da_Construcao" label="Instagram" />
                     </div>
                   </div>
                 </div>
@@ -132,7 +130,7 @@ const ContactSection = () => {
           <Card className="border border-border/50 shadow-card overflow-hidden">
             <div className="h-[400px] w-full">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0976950243356!2d-46.6547919!3d-23.5651084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1627909542948!5m2!1spt-BR!2sbr"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3680.052388818642!2d-44.19160018255615!3d-22.719827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9c58eca730b92b%3A0x74c9a207f895fe4b!2sR.%20S%C3%A3o%20Jo%C3%A3o%20Batista%2C%2017%20-%20Areal%2C%20Angra%20dos%20Reis%20-%20RJ!5e0!3m2!1spt-BR!2sbr!4v1651837803927!5m2!1spt-BR!2sbr"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -188,6 +186,8 @@ const SocialLink = ({ icon, href, label }: SocialLinkProps) => (
     href={href}
     className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-white transition-colors"
     aria-label={label}
+    target="_blank"
+    rel="noopener noreferrer"
   >
     {icon}
   </a>

@@ -21,8 +21,9 @@ const HeroSection = () => {
     }
   };
   
-  return <section id="hero" ref={sectionRef} className="relative min-h-screen flex items-center justify-center pt-16">
-      {/* Background with overlay - Blue color (60%) */}
+  return (
+    <section id="hero" ref={sectionRef} className="relative min-h-screen flex items-center justify-center pt-16">
+      {/* Background with overlay */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-primary/30 to-background"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/5 to-black/10"></div>
@@ -31,7 +32,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 md:px-8 relative z-10 text-center">
         <div className="max-w-4xl mx-auto">
           <span className="inline-block px-4 py-2 bg-secondary/60 backdrop-blur-md rounded-full text-secondary-foreground font-medium mb-6 animate-slide-up [animation-delay:300ms]">
-            Materiais para Construção
+            Materiais Elétricos, Hidráulicos e Parafusos
           </span>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight animate-slide-up [animation-delay:500ms]">
@@ -54,11 +55,12 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Scroll down indicator - Adjusted to be lower */}
+      {/* Scroll down indicator */}
       <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 text-primary cursor-pointer animate-bounce" onClick={scrollToNextSection}>
         <ChevronDown size={32} />
       </div>
-    </section>;
+    </section>
+  );
 };
 
 export default HeroSection;
