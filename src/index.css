@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
 @tailwind base;
@@ -7,38 +6,38 @@
 
 @layer base {
   :root {
-    --background: 210 40% 98%;
-    --foreground: 220 20% 20%;
+    --background: 42 5% 95%;
+    --foreground: 167 5% 17%;
     --card: 0 0% 100%;
-    --card-foreground: 220 20% 20%;
+    --card-foreground: 167 5% 17%;
     --popover: 0 0% 100%;
-    --popover-foreground: 220 20% 20%;
+    --popover-foreground: 167 5% 17%;
     
-    --secondary: 200 30% 92%;
-    --secondary-foreground: 200 35% 25%;
-    --muted: 200 30% 92%;
-    --muted-foreground: 200 25% 40%;
+    --secondary: 167 5% 17%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 167 5% 90%;
+    --muted-foreground: 167 5% 40%;
     
-    --primary: 200 85% 30%;
+    --primary: 33 59% 51%;
     --primary-foreground: 0 0% 100%;
-    --accent: 200 90% 35%;
+    --accent: 33 59% 51%;
     --accent-foreground: 0 0% 100%;
     
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 200 85% 30%;
+    --border: 167 5% 80%;
+    --input: 167 5% 80%;
+    --ring: 33 59% 51%;
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-foreground: 167 5% 17%;
+    --sidebar-primary: 167 5% 17%;
     --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 222 91.2% 59.8%;
+    --sidebar-accent: 167 4.8% 95.9%;
+    --sidebar-accent-foreground: 167 5% 17%;
+    --sidebar-border: 167 13% 91%;
+    --sidebar-ring: 33 59% 51%;
   }
 }
 
