@@ -31,6 +31,15 @@ const HeroSection = () => {
 
       <div className="container mx-auto px-4 md:px-8 relative z-10 text-center">
         <div className="max-w-4xl mx-auto">
+          {/* Logo Display */}
+          <div className="mb-8 animate-slide-up [animation-delay:100ms] flex justify-center">
+            <img 
+              src="/lovable-uploads/33108443-3b32-48bd-a904-58a6f7164110.png" 
+              alt="Areal da Construção" 
+              className="w-64 md:w-80 h-auto"
+            />
+          </div>
+          
           <span className="inline-block px-4 py-2 bg-secondary/60 backdrop-blur-md rounded-full text-secondary-foreground font-medium mb-6 animate-slide-up [animation-delay:300ms]">
             Materiais Elétricos, Hidráulicos e Parafusos
           </span>
