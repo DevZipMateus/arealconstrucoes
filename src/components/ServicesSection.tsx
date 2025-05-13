@@ -1,8 +1,7 @@
 
 import { useEffect, useRef } from 'react';
-import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { FileText, PieChart, Building, Shield, FileCheck, BarChart } from 'lucide-react';
+import { Building, FileCheck, FileText, Map, Home, Link } from 'lucide-react';
 
 const ServicesSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -29,33 +28,33 @@ const ServicesSection = () => {
   const services = [
     {
       icon: <Building className="h-12 w-12 text-primary" />,
-      title: "Abertura e Legalização de Empresas",
-      description: "Simplificamos todo o processo de criação da sua empresa, cuidando da burocracia para você iniciar suas atividades rapidamente."
+      title: "Material Elétrico",
+      description: "Cabos, disjuntores, tomadas, interruptores e todos os componentes elétricos para sua construção ou reforma."
     }, 
     {
       icon: <FileText className="h-12 w-12 text-primary" />,
-      title: "Contabilidade Empresarial",
-      description: "Registro preciso de todas as operações fiscais e contábeis, garantindo conformidade com as exigências legais."
+      title: "Material Hidráulico",
+      description: "Tubos, conexões, registros e todo tipo de material hidráulico para instalações residenciais e comerciais."
     }, 
     {
-      icon: <PieChart className="h-12 w-12 text-primary" />,
-      title: "Gestão Fiscal e Tributária",
-      description: "Planejamento tributário estratégico para reduzir legalmente a carga de impostos e otimizar os recursos da sua empresa."
+      icon: <Link className="h-12 w-12 text-primary" />,
+      title: "Parafusos",
+      description: "Ampla variedade de parafusos, porcas, arruelas e fixadores para diferentes aplicações e necessidades."
     }, 
     {
-      icon: <Shield className="h-12 w-12 text-primary" />,
-      title: "Consultoria Tributária",
-      description: "Orientação especializada para tomadas de decisão estratégicas, maximizando resultados e minimizando riscos."
+      icon: <Home className="h-12 w-12 text-primary" />,
+      title: "Acessórios para Construção",
+      description: "Ferramentas e acessórios essenciais para suas obras e projetos de construção."
     }, 
     {
       icon: <FileCheck className="h-12 w-12 text-primary" />,
-      title: "Departamento Pessoal",
-      description: "Gestão completa de folha de pagamento, admissões, demissões e toda a rotina trabalhista da sua empresa."
+      title: "Atendimento Especializado",
+      description: "Equipe treinada para oferecer a melhor orientação na escolha dos produtos ideais para sua necessidade."
     }, 
     {
-      icon: <BarChart className="h-12 w-12 text-primary" />,
-      title: "Gestão Financeira",
-      description: "Acompanhamento de indicadores financeiros, fluxo de caixa e análises gerenciais para decisões mais assertivas."
+      icon: <Map className="h-12 w-12 text-primary" />,
+      title: "Entrega Local",
+      description: "Serviço de entrega para toda região de Angra dos Reis, facilitando seus projetos de construção."
     }
   ];
   
@@ -64,14 +63,14 @@ const ServicesSection = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <span className="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4 animate-on-scroll">
-            Nossos Serviços
+            Nossos Produtos
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 animate-on-scroll">
-            Soluções Contábeis Completas
+            Tudo para sua Construção
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto animate-on-scroll">
-            Oferecemos uma gama completa de serviços contábeis e financeiros para atender às necessidades 
-            específicas do seu negócio.
+            Oferecemos uma gama completa de produtos e materiais de qualidade para atender todas as necessidades 
+            da sua obra.
           </p>
         </div>
 
@@ -85,10 +84,6 @@ const ServicesSection = () => {
               index={index} 
             />
           ))}
-        </div>
-
-        <div className="mt-16 text-center animate-on-scroll">
-          
         </div>
       </div>
     </section>

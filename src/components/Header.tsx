@@ -43,9 +43,11 @@ const Header = () => {
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex items-center justify-between">
           <a href="#" className="relative z-20">
-            <h1 className="text-2xl font-display font-bold text-secondary-foreground">
-              <span className="text-primary">Harmônica</span> Contabilidade
-            </h1>
+            <img 
+              src="/lovable-uploads/33108443-3b32-48bd-a904-58a6f7164110.png" 
+              alt="Areal da Construção" 
+              className="h-16 md:h-20 w-auto"
+            />
           </a>
 
           {/* Desktop Menu */}
@@ -95,7 +97,6 @@ const NavLinks = ({ mobile, onClick }: NavLinksProps) => {
     { name: 'Início', href: '#hero' },
     { name: 'Sobre Nós', href: '#about' },
     { name: 'Serviços', href: '#services' },
-    { name: 'Planos', href: '#plans' },
     { name: 'Contato', href: '#contact' },
   ];
 

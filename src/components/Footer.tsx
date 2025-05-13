@@ -1,114 +1,80 @@
 
-import { Button } from '@/components/ui/button';
-import { ChevronUp } from 'lucide-react';
+import React from 'react';
+import { Instagram, Mail, MapPin, Phone } from 'lucide-react';
 
 const Footer = () => {
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  };
-
   return (
-    <footer className="bg-secondary-foreground text-white py-16">
-      <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="space-y-4">
-            <h3 className="text-xl font-bold mb-4">
-              <span className="text-primary">Harmônica</span> Contabilidade
-            </h3>
-            <p className="text-white/80 max-w-xs">
-              Soluções contábeis personalizadas para o crescimento e sucesso do seu negócio.
+    <footer className="bg-primary/95 text-white">
+      <div className="container mx-auto py-12 px-4 md:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          {/* Logo and Description */}
+          <div className="flex flex-col items-center md:items-start">
+            <img 
+              src="/lovable-uploads/33108443-3b32-48bd-a904-58a6f7164110.png" 
+              alt="Areal da Construção" 
+              className="h-24 w-auto mb-4"
+            />
+            <p className="text-white/80 text-center md:text-left">
+              Conectando ideias, fixando resultados. Materiais elétricos, hidráulicos e parafusos de qualidade para sua construção.
             </p>
-            <div className="flex space-x-4 mt-6">
-              <FooterSocialLink href="#" aria-label="Facebook" />
-              <FooterSocialLink href="#" aria-label="Instagram" />
-              <FooterSocialLink href="#" aria-label="LinkedIn" />
+          </div>
+
+          {/* Contact Information */}
+          <div className="flex flex-col items-center md:items-start">
+            <h3 className="text-xl font-bold mb-4">Contato</h3>
+            <ul className="space-y-3">
+              <li className="flex items-center gap-2">
+                <Phone size={18} className="text-white/80" />
+                <a href="tel:+5524992627116" className="text-white/80 hover:text-white transition-colors">
+                  (24) 99262-7116
+                </a>
+              </li>
+              <li className="flex items-center gap-2">
+                <Mail size={18} className="text-white/80" />
+                <a href="mailto:ronaldo.rocha27@gmail.com" className="text-white/80 hover:text-white transition-colors">
+                  ronaldo.rocha27@gmail.com
+                </a>
+              </li>
+              <li className="flex items-start gap-2">
+                <MapPin size={18} className="text-white/80 mt-1 flex-shrink-0" />
+                <span className="text-white/80">
+                  Rua São João Batista, 17 - Areal,<br />
+                  Angra dos Reis - RJ
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Social Media and Links */}
+          <div className="flex flex-col items-center md:items-start">
+            <h3 className="text-xl font-bold mb-4">Redes Sociais</h3>
+            <div className="flex space-x-4">
+              <a 
+                href="https://www.instagram.com/Areal_da_Construcao" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-white/10 hover:bg-white/20 transition-colors p-3 rounded-full"
+                aria-label="Instagram"
+              >
+                <Instagram size={20} />
+              </a>
             </div>
-          </div>
-
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Links Rápidos</h4>
-            <ul className="space-y-2">
-              <FooterNavItem href="#hero">Início</FooterNavItem>
-              <FooterNavItem href="#about">Sobre Nós</FooterNavItem>
-              <FooterNavItem href="#services">Serviços</FooterNavItem>
-              <FooterNavItem href="#plans">Planos</FooterNavItem>
-              <FooterNavItem href="#contact">Contato</FooterNavItem>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Serviços</h4>
-            <ul className="space-y-2">
-              <FooterNavItem href="#services">Contabilidade Empresarial</FooterNavItem>
-              <FooterNavItem href="#services">Consultoria Tributária</FooterNavItem>
-              <FooterNavItem href="#services">Gestão Fiscal</FooterNavItem>
-              <FooterNavItem href="#services">Departamento Pessoal</FooterNavItem>
-              <FooterNavItem href="#services">Planejamento Tributário</FooterNavItem>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Contato</h4>
-            <ul className="space-y-3 text-white/80">
-              <li>(11) 3456-7890</li>
-              <li>contato@harmonicacontabil.com.br</li>
-              <li>Av. Paulista, 1000, São Paulo - SP</li>
-              <li>Segunda a Sexta, 9h às 18h</li>
-            </ul>
+            <h3 className="text-xl font-bold mb-4 mt-6">Horário</h3>
+            <p className="text-white/80">
+              Segunda à Sexta: 08:00 - 18:00<br />
+              Sábado: 08:00 - 12:00
+            </p>
           </div>
         </div>
 
-        <hr className="border-white/20 my-8" />
-
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <p className="text-white/70 text-sm">
-            © {new Date().getFullYear()} Harmônica Contabilidade. Todos os direitos reservados.
+        <div className="border-t border-white/20 mt-10 pt-6 text-center text-white/60 text-sm">
+          <p>
+            © {new Date().getFullYear()} Areal da Construção. Todos os direitos reservados.
           </p>
-          <div className="mt-4 md:mt-0">
-            <Button
-              onClick={scrollToTop}
-              variant="outline"
-              size="icon"
-              className="rounded-full bg-primary/80 border-primary/20 hover:bg-primary/90 text-white"
-            >
-              <ChevronUp className="h-5 w-5" />
-            </Button>
-          </div>
         </div>
       </div>
     </footer>
   );
 };
-
-interface FooterNavItemProps {
-  href: string;
-  children: React.ReactNode;
-}
-
-const FooterNavItem = ({ href, children }: FooterNavItemProps) => (
-  <li>
-    <a
-      href={href}
-      className="text-white/70 hover:text-primary transition-colors duration-200"
-    >
-      {children}
-    </a>
-  </li>
-);
-
-interface FooterSocialLinkProps {
-  href: string;
-  'aria-label': string;
-}
-
-const FooterSocialLink = (props: FooterSocialLinkProps) => (
-  <a
-    {...props}
-    className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white/20 hover:bg-primary/80 transition-colors duration-200"
-  />
-);
 
 export default Footer;
