@@ -52,7 +52,7 @@ const Header = () => {
 
           {/* Desktop Menu */}
           <nav className="hidden md:flex items-center space-x-1">
-            <NavLinks />
+            <NavLinks isScrolled={isScrolled} />
             <Button className="quote-btn ml-4 text-white rounded-md transition-all duration-300 shadow-md hover:shadow-lg flex items-center gap-2">
               <FileText size={18} />
               Fale Conosco
@@ -63,7 +63,7 @@ const Header = () => {
           <div className="md:hidden">
             <Sheet>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="h-10 w-10 text-secondary-foreground">
+                <Button variant="ghost" size="icon" className={`h-10 w-10 ${!isScrolled ? 'text-white' : 'text-secondary-foreground'}`}>
                   <Menu size={24} />
                   <span className="sr-only">Abrir menu</span>
                 </Button>
@@ -90,9 +90,10 @@ const Header = () => {
 interface NavLinksProps {
   mobile?: boolean;
   onClick?: () => void;
+  isScrolled?: boolean;
 }
 
-const NavLinks = ({ mobile, onClick }: NavLinksProps) => {
+const NavLinks = ({ mobile, onClick, isScrolled }: NavLinksProps) => {
   const links = [
     { name: 'Início', href: '#hero' },
     { name: 'Sobre Nós', href: '#about' },
@@ -109,7 +110,9 @@ const NavLinks = ({ mobile, onClick }: NavLinksProps) => {
           className={`font-medium transition-all duration-300 px-3 py-2 rounded-md
             ${mobile 
               ? 'text-xl text-foreground hover:text-primary mb-2 w-full text-center py-3' 
-              : 'text-foreground/80 hover:text-primary hover:bg-secondary/50'
+              : isScrolled
+                ? 'text-foreground/80 hover:text-primary hover:bg-secondary/50'
+                : 'text-white hover:text-white/80 hover:bg-white/10'
             }`}
           onClick={onClick}
         >
