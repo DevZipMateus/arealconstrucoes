@@ -22,10 +22,10 @@ const HeroSection = () => {
   };
   
   return (
-    <section id="hero" ref={sectionRef} className="relative min-h-screen flex items-center justify-center pt-16">
+    <section id="hero" ref={sectionRef} className="relative min-h-screen flex items-center justify-center pt-16 bg-brand-dark">
       {/* Background with overlay */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/30 to-background"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-background/5"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/5 to-black/10"></div>
       </div>
 
@@ -40,15 +40,15 @@ const HeroSection = () => {
             />
           </div>
           
-          <span className="inline-block px-4 py-2 bg-secondary/60 backdrop-blur-md rounded-full text-secondary-foreground font-medium mb-6 animate-slide-up [animation-delay:300ms]">
+          <span className="inline-block px-4 py-2 bg-primary/70 backdrop-blur-md rounded-full text-primary-foreground font-medium mb-6 animate-slide-up [animation-delay:300ms]">
             Materiais Elétricos, Hidráulicos e Parafusos
           </span>
           
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight animate-slide-up [animation-delay:500ms]">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight animate-slide-up [animation-delay:500ms]">
             <span className="text-primary">Areal da Construção</span>
           </h1>
           
-          <p className="text-lg md:text-xl text-foreground/80 mb-8 max-w-2xl mx-auto animate-slide-up [animation-delay:700ms]">
+          <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto animate-slide-up [animation-delay:700ms]">
             Conectando ideias, fixando resultados.
           </p>
           
