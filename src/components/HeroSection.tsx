@@ -1,3 +1,4 @@
+
 import { useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { ChevronDown, FileText } from 'lucide-react';
@@ -34,11 +35,11 @@ const HeroSection = () => {
             Materiais Elétricos, Hidráulicos e Parafusos
           </span>
           
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight animate-slide-up [animation-delay:500ms]">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold light-title mb-6 leading-tight animate-slide-up [animation-delay:500ms]">
             <span className="text-primary">Areal da Construção</span>
           </h1>
           
-          <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto animate-slide-up [animation-delay:700ms]">
+          <p className="text-lg md:text-xl light-title mb-8 max-w-2xl mx-auto animate-slide-up [animation-delay:700ms]">
             Conectando ideias, fixando resultados.
           </p>
           

@@ -38,6 +38,9 @@
     --sidebar-accent-foreground: 167 5% 17%;
     --sidebar-border: 167 13% 91%;
     --sidebar-ring: 33 59% 51%;
+    
+    /* Adding a lighter title color */
+    --title-color: 0 0% 95%;
   }
 }
 
@@ -60,6 +63,11 @@
 
   .container {
     @apply px-4 md:px-6 lg:px-8;
+  }
+  
+  /* Light title style for initial view */
+  .light-title {
+    @apply text-[#eee];
   }
 }
 
@@ -265,4 +273,9 @@ html {
   .section-padding {
     @apply py-6;
   }
+}
+
+/* Scrolling behavior for titles */
+.scrolled .light-title {
+  @apply text-foreground transition-colors duration-300;
 }

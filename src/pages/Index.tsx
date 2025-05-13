@@ -1,5 +1,5 @@
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
@@ -9,8 +9,20 @@ import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 
 const Index = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  
   useEffect(() => {
     const handleScroll = () => {
+      // Check if page is scrolled for title color change
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+        document.body.classList.add('scrolled');
+      } else {
+        setIsScrolled(false);
+        document.body.classList.remove('scrolled');
+      }
+      
+      // Original animation trigger logic
       const animatedElements = document.querySelectorAll('.animate-on-scroll');
       animatedElements.forEach((element) => {
         const elementPosition = element.getBoundingClientRect().top;
