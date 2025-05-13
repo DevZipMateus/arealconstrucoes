@@ -2,13 +2,16 @@
 import { useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { ChevronDown, FileText } from 'lucide-react';
+
 const HeroSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
+  
   useEffect(() => {
     if (sectionRef.current) {
       sectionRef.current.classList.add('animate-fade-in');
     }
   }, []);
+  
   const scrollToNextSection = () => {
     const aboutSection = document.getElementById('about');
     if (aboutSection) {
@@ -17,6 +20,14 @@ const HeroSection = () => {
       });
     }
   };
+
+  const handleWhatsAppClick = () => {
+    // WhatsApp link with predefined message
+    const phoneNumber = "5524992627116"; // Brazilian format with country code
+    const message = encodeURIComponent("Olá! Gostaria de solicitar um orçamento para produtos da Areal da Construção.");
+    window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+  };
+
   return <section id="hero" ref={sectionRef} className="relative min-h-screen flex items-center justify-center pt-16 bg-brand-dark">
       {/* Background with overlay */}
       <div className="absolute inset-0 z-0">
@@ -44,10 +55,19 @@ const HeroSection = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up [animation-delay:900ms] mb-16">
-            <Button size="lg" className="rounded-md shadow-md transition-all duration-300">
+            <Button 
+              size="lg" 
+              className="rounded-md shadow-md transition-all duration-300"
+              onClick={() => window.location.href = '#services'}
+            >
               Conhecer Produtos
             </Button>
-            <Button size="lg" variant="secondary" className="quote-btn hover:border-primary hover:bg-secondary/70 group rounded-md shadow-md transition-all duration-300 flex gap-2">
+            <Button 
+              size="lg" 
+              variant="secondary" 
+              className="quote-btn hover:border-primary hover:bg-secondary/70 group rounded-md shadow-md transition-all duration-300 flex gap-2"
+              onClick={handleWhatsAppClick}
+            >
               <FileText size={20} className="group-hover:animate-pulse" />
               <span>Entre em Contato</span>
             </Button>
@@ -61,4 +81,5 @@ const HeroSection = () => {
       </div>
     </section>;
 };
+
 export default HeroSection;

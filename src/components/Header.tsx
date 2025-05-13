@@ -32,6 +32,13 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleWhatsAppClick = () => {
+    // WhatsApp link with predefined message
+    const phoneNumber = "5524992627116"; // Brazilian format with country code
+    const message = encodeURIComponent("Olá! Gostaria de mais informações sobre os produtos da Areal da Construção.");
+    window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+  };
+
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -53,7 +60,10 @@ const Header = () => {
           {/* Desktop Menu */}
           <nav className="hidden md:flex items-center space-x-1">
             <NavLinks isScrolled={isScrolled} />
-            <Button className="quote-btn ml-4 text-white rounded-md transition-all duration-300 shadow-md hover:shadow-lg flex items-center gap-2">
+            <Button 
+              className="quote-btn ml-4 text-white rounded-md transition-all duration-300 shadow-md hover:shadow-lg flex items-center gap-2"
+              onClick={handleWhatsAppClick}
+            >
               <FileText size={18} />
               Fale Conosco
             </Button>
@@ -72,7 +82,10 @@ const Header = () => {
                 <nav className="flex flex-col items-center space-y-4 text-lg">
                   <NavLinks mobile />
                   <SheetClose asChild>
-                    <Button className="quote-btn mt-4 w-full text-white rounded-md transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center gap-2 py-3 text-base">
+                    <Button 
+                      className="quote-btn mt-4 w-full text-white rounded-md transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center gap-2 py-3 text-base"
+                      onClick={handleWhatsAppClick}
+                    >
                       <FileText size={18} />
                       Fale Conosco
                     </Button>
