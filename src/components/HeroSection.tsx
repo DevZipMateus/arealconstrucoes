@@ -1,17 +1,13 @@
-
 import { useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { ChevronDown, FileText } from 'lucide-react';
-
 const HeroSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
-  
   useEffect(() => {
     if (sectionRef.current) {
       sectionRef.current.classList.add('animate-fade-in');
     }
   }, []);
-  
   const scrollToNextSection = () => {
     const aboutSection = document.getElementById('about');
     if (aboutSection) {
@@ -20,9 +16,7 @@ const HeroSection = () => {
       });
     }
   };
-  
-  return (
-    <section id="hero" ref={sectionRef} className="relative min-h-screen flex items-center justify-center pt-16 bg-brand-dark">
+  return <section id="hero" ref={sectionRef} className="relative min-h-screen flex items-center justify-center pt-16 bg-brand-dark">
       {/* Background with overlay */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-background/5"></div>
@@ -33,11 +27,7 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto">
           {/* Logo Display */}
           <div className="mb-8 animate-slide-up [animation-delay:100ms] flex justify-center">
-            <img 
-              src="/lovable-uploads/33108443-3b32-48bd-a904-58a6f7164110.png" 
-              alt="Areal da Construção" 
-              className="w-64 md:w-80 h-auto"
-            />
+            <img alt="Areal da Construção" className="w-64 md:w-80 h-auto" src="/lovable-uploads/dc161073-883b-4364-8f4e-5a83f98543c8.jpg" />
           </div>
           
           <span className="inline-block px-4 py-2 bg-primary/70 backdrop-blur-md rounded-full text-primary-foreground font-medium mb-6 animate-slide-up [animation-delay:300ms]">
@@ -68,8 +58,6 @@ const HeroSection = () => {
       <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 text-primary cursor-pointer animate-bounce" onClick={scrollToNextSection}>
         <ChevronDown size={32} />
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
